@@ -76,7 +76,7 @@ mvn clean install   L'application sera accessible sur http://localhost:8080
 AuthService: Gère l'authentification
 EmployeeService: Gère les opérations CRUD
   ```
-** Composants**
+**Composants**
   ```
 - LoginComponent: 
 Formulaire de connexion avec validation
@@ -94,7 +94,7 @@ Messages d'erreur inline
 Affichage des détails d'un employé
 Boutons : Retour, Modifier
   ```
-** Sécurité**
+**Sécurité**
   ```
 - Stockage du Token
 - Le token JWT est stocké dans le localStorage 
