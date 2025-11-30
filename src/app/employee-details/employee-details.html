@@ -1,0 +1,73 @@
+<!-- employee-details.html -->
+<div class="details-container">
+  <div class="details-card">
+    <!-- Loading -->
+    <div *ngIf="isLoading" class="loading">
+      <div class="spinner"></div>
+      <p>Chargement des détails...</p>
+    </div>
+
+    <!-- Erreur -->
+    <div *ngIf="errorMessage && !isLoading" class="error-message">
+      {{ errorMessage }}
+    </div>
+
+    <!-- TOUT LE CONTENU (avatar + infos + actions) -->
+    <div *ngIf="employee && !isLoading" class="employee-content">
+      <!-- Grille des détails -->
+      <div class="details-grid">
+
+        <!-- Informations personnelles -->
+        <div class="detail-section">
+          <h4>Informations Personnelles</h4>
+          <div class="detail-item">
+            <span class="label">Prénom :</span>
+            <span class="value">{{ employee.firstName }}</span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Nom :</span>
+            <span class="value">{{ employee.lastName }}</span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Email :</span>
+            <span class="value">{{ employee.email }}</span>
+          </div>
+        </div>
+
+        <!-- Informations professionnelles -->
+        <div class="detail-section">
+          <h4>Informations Professionnelles</h4>
+          <div class="detail-item">
+            <span class="label">Salaire :</span>
+            <span class="value salary">{{ employee.salary}} DH</span>
+          </div>
+          <div class="detail-item">
+            <span class="label">ID Employé :</span>
+            <span class="value">{{ employee.id }}</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Actions rapides -->
+      <div class="quick-actions">
+        <h4>Actions Rapides</h4>
+        <div class="actions-grid">
+          <button class="action-btn" (click)="onEdit()">
+            <i class="fas fa-edit"></i>
+            <span>Modifier</span>
+          </button>
+          <button class="action-btn btn-delete" (click)="onDelete()">
+            <i class="fas fa-trash"></i>
+            <span>Supprimer</span>
+          </button>
+          <button class="action-btn btn-back" (click)="onBack()">
+            <i class="fas fa-list"></i>
+            <span>Liste Employés</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
