@@ -7,22 +7,15 @@ Application web moderne pour la gestion des employés avec authentification JWT,
 ✅ Protection des routes avec AuthGuard
 ✅ Formulaires réactifs avec validation
 ✅ Interface responsive avec Tailwind CSS
-✅ Génération de rapports PDF
 ✅ Gestion des erreurs utilisateur
 ✅ Navigation intuitive
 
-## Installation
-  ```
-Cloner le repository
-git clone https://github.com/salmaaz29/employee-frontend.git
-cd employee-frontend
-  ```
 ## Installation & lancement
 
 1. **Cloner le projet**
    ```
-   git clone https://github.com/salmaaz29/backend_empolyee.git
-   cd backend_empolyee
+   git clone https://github.com/salmaaz29/employee-frontend.git
+   cd employee-frontend
     ```
 2. **Lancer**
  ```
